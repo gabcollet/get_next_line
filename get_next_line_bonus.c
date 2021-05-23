@@ -1,22 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcollet <gcollet@student.42quebec.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/14 15:27:41 by gcollet           #+#    #+#             */
-/*   Updated: 2021/05/23 19:02:04 by gcollet          ###   ########.fr       */
+/*   Created: 2021/05/22 18:27:46 by gcollet           #+#    #+#             */
+/*   Updated: 2021/05/23 19:20:09 by gcollet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Retourne une ligne lue depuis un fd, sans le retour à la ligne */
-/* Valeur de retour : 
-1 : Une ligne a été lue
-0 : La fin de fichier a été atteinte
--1 : Une erreur est survenue */
-
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 /* fonction qui avance le pointeur de tab  */
 static int	newline_to_tab(char **tab, int fd, char *ptr_newline)
