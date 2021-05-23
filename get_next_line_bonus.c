@@ -6,7 +6,7 @@
 /*   By: gcollet <gcollet@student.42quebec.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/22 18:27:46 by gcollet           #+#    #+#             */
-/*   Updated: 2021/05/23 19:20:09 by gcollet          ###   ########.fr       */
+/*   Updated: 2021/05/23 19:36:43 by gcollet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ static void	free_buffer(char **tab, char **line)
 }
 
 /* fonction qui écrit le reste du buffer */
-static int	reste_du_tableau(char **tab, int fd, char **line, char *buffer)
+static int	buffer_to_tab(char **tab, int fd, char **line, char *buffer)
 {
 	char	*ptr_newline;
 	char	*temp;
@@ -135,7 +135,7 @@ int	get_next_line(int fd, char **line)
 	while ((retour) > 0)
 	{
 		buffer[retour] = '\0';
-		retour = reste_du_tableau(tab, fd, line, buffer);
+		retour = buffer_to_tab(tab, fd, line, buffer);
 		if (retour != 0)
 			break ;
 		retour = read(fd, buffer, BUFFER_SIZE);
