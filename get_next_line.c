@@ -6,7 +6,7 @@
 /*   By: gcollet <gcollet@student.42quebec.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 15:27:41 by gcollet           #+#    #+#             */
-/*   Updated: 2021/05/23 19:36:11 by gcollet          ###   ########.fr       */
+/*   Updated: 2021/05/24 12:40:30 by gcollet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -138,7 +138,7 @@ int	get_next_line(int fd, char **line)
 		return (retour);
 	}
 	retour = read(fd, buffer, BUFFER_SIZE);
-	while ((retour) > 0)
+	while (retour > 0)
 	{
 		buffer[retour] = '\0';
 		retour = buffer_to_tab(tab, fd, line, buffer);
